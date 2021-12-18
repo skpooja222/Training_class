@@ -1,0 +1,44 @@
+Storage Classes in C
+
+--> Storage classes in C are used to determine the lifetime, visibility, memory location, and initial value of a variable. There are four types of storage classes in C
+
+1. Automatic
+2. External
+3. Static
+4. Register
+
+
+1. Automatic
+Automatic variables are allocated memory automatically at runtime.
+The visibility of the automatic variables is limited to the block in which they are defined.
+The scope of the automatic variables is limited to the block in which they are defined.
+The automatic variables are initialized to garbage by default.
+The memory assigned to automatic variables gets freed upon exiting from the block.
+The keyword used for defining automatic variables is auto.
+Every local variable is automatic in C by default.
+
+2. Static
+The variables defined as static specifier can hold their value between the multiple function calls.
+Static local variables are visible only to the function or the block in which they are defined.
+A same static variable can be declared many times but can be assigned at only one time.
+Default initial value of the static integral variable is 0 otherwise null.
+The visibility of the static global variable is limited to the file in which it has declared.
+The keyword used to define static variable is static.
+
+3. Register
+The variables defined as the register is allocated the memory into the CPU registers depending upon the size of the memory remaining in the CPU.
+We can not dereference the register variables, i.e., we can not use &operator for the register variable.
+The access time of the register variables is faster than the automatic variables.
+The initial default value of the register local variables is 0.
+The register keyword is used for the variable which should be stored in the CPU register. However, it is compiler?s choice whether or not; the variables can be stored in the register.
+We can store pointers into the register, i.e., a register can store the address of a variable.
+Static variables can not be stored into the register since we can not use more than one storage specifier for the same variable.
+
+
+4.External
+The external storage class is used to tell the compiler that the variable defined as extern is declared with an external linkage elsewhere in the program.
+The variables declared as extern are not allocated any memory. It is only declaration and intended to specify that the variable is declared elsewhere in the program.
+The default initial value of external integral type is 0 otherwise null.
+We can only initialize the extern variable globally, i.e., we can not initialize the external variable within any block or method.
+An external variable can be declared many times but can be initialized at only once.
+If a variable is declared as external then the compiler searches for that variable to be initialized somewhere in the program which may be extern or static. If it is not, then the compiler will show an error.

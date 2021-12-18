@@ -1,0 +1,27 @@
+
+Compilation Process
+
+1) Complilation will transfer the source code into machine language
+2) compilation has various steps which is listed below
+
+a. Preprocesser-> The main function of the C preprocessor is to remove comments from the source code and
+interpret preprocessor directives which are given by the statements that begin with #.
+
+--> The first method tells the preprocessor to look for the file in the standard include directories,
+which for Linux are in /usr/include.
+
+b. Compiler and assembler
+--> The compiler translates the C
+code into assembly language, which is a machine level code that contains instructions that
+manipulate the memory and processor directly, in a layer beneath the operating system.
+Usually, you do not need to see the assembly code.
+
+
+d. linker
+The object file hello.o contains a binary version of the machine language that was created
+from your source code hello.c
+
+In order to create the executable hello or a.out, you need
+to use the linker to process your main function and any possible input arguments you might
+use, and link your program with other programs that contain functions that your program
+uses
